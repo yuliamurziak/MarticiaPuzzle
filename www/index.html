@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Marticia's Puzzle</title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <script>
+            function play(){
+                
+                 var audio = document.getElementById("audio");
+                 audio.play();
+                           }
+             </script>
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js">
+
+    </script>
+
+
+</head>
+
+<body ng-app="kittyApp" ng-controller="kittyctrl">
+    <ion-pane>
+        <ion-header-bar class="bar-stable">
+            <h1 class="title">Marticia's Puzzle</h1>
+        </ion-header-bar>
+        <ion-content>
+            <h4>Hello, my friend! I am Yuliia who has created this exciting puzzle. I have a beautful kitty called Marticia and
+                I can give you the opportunity to tickle her belly. You just need to define which letter in the cirle(s)
+                belongs to each statement
+            </h4><br><br>
+            <img src="img/marticia.jpeg" alt="Marticia picture" id="kitty"><br><br>
+            <ol start="1">
+                <li>1. Black cats with white paws who are finishing, and who don’t have fleas.</li>
+                <li>2. Grey cats with fleas and white paws, who do not eat fish.</li>
+                <li>3. Red cats with fleas who love fish, and whose paws are not white.</li>
+                <li>4. Cats wit black fur and black paws, who love fish but do not have fleas.</li>
+                <li>5. Black cats with white paws who have fleas and love fish.</li>
+                <li>6. Cats with fleas, black fur and white paws, but do not like fish.</li>
+            </ol><br>
+            <div id="row"></div>
+            <div id="columnLeft"><img src="img/final.jpeg" alt="Marticia puzzle" id="puzzle"></div>
+            <form ng-app="kittyApp" ng-controller="kittyctrl" ng-init="addCorrectAnswers()" ng-submit="calculate()">
+                <div>
+
+                    <label for="one">1. </label>
+                    <select ng-model="one" ng-show="!isObjectEmpty(card)">
+                  <option ng-repeat="item in optionvalues">{{item}}</option>                  
+              </select><br>
+                    <label for="two">2. </label>
+                    <select ng-model="two">
+                  <option ng-repeat="item in optionvalues">{{item}}</option>                  
+              </select><br>
+                    <label for="three">3. </label>
+                    <select ng-model="three">
+                  <option ng-repeat="item in optionvalues">{{item}}</option>                  
+              </select><br>
+                    <label for="four">4. </label>
+                    <select ng-model="four">
+                  <option ng-repeat="item in optionvalues">{{item}}</option>                  
+              </select><br>
+                    <label for="five">5. </label>
+                    <select ng-model="five">
+                  <option ng-repeat="item in optionvalues">{{item}}</option>                 
+              </select><br>
+                    <label for="six">6. </label>
+                    <select ng-model="six">
+                  <option ng-repeat="item in optionvalues">{{item}}</option>                  
+              </select><br>
+                </div><br>
+                <p id="messageResult"></p>
+                <button id="soundcontrols" type="submit">Ask Marticia</button>
+
+
+                <audio id="audio" src="sounds/badNoise.mp3" ></audio>
+            </form>
+        </ion-content>
+    </ion-pane>
+</body>
+
+</html>

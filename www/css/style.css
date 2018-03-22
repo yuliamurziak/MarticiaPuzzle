@@ -1,0 +1,73 @@
+/* Empty. Add your own CSS if you like */
+body ion-content{
+    background-color: rgb(246,235,205); 
+}
+
+ body ion-content h4{
+    font-family: "Lucida Calligraphy", "Times New Roman";
+}
+body ion-content #kitty {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border:1px solid black;
+    height:100px;
+    width:150px;
+  transform: rotate(90deg);
+
+}
+  #columnLeft{
+    float: left;
+    width:50%;
+    
+}
+ #columnRight{
+    
+   float:right;
+   width:50%;
+   padding-top: 50px;
+   padding-left: 50px;
+}
+#row:after{
+    clear:both;
+}
+#messageResult{
+    color: #B53396;
+    font-family: Lucida Calligraphy;
+    font-size: 26px;
+    line-height: 30px;
+}
+
+#puzzle{
+    
+     height:350px;
+     width:350px;
+}
+body ion-content button{
+    clear:both;
+    width:150px;
+    height: 80px;
+    padding: 0px 20px;
+    border-radius: 5px;
+  
+    width: 130px;
+
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    background-color: #B53396;
+    color: white;
+    font-family: "Lucida Calligraphy", "Times New Roman";
+  
+}
+
+body ion-content button:hover{
+    background-color: white;
+    color: #B53396;
+}
+ select{
+    background-color: #B53396;
+    color:white;
+}
