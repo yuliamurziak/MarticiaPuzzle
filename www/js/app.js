@@ -12,7 +12,7 @@ angular.module('kittyApp', ['ionic'])
   var dbSize = 5 * 1024 * 1024; // 5MB
  /// open database
  var db = openDatabase("kittyApp", "1", "Marticia's Puzzle", dbSize);
- var insertValues = ["A","B","C","D","E","F"];
+ var insertValues = ["C","L","F","B","G","H"];
 
 
  $scope.isObjectEmpty = function(card){
@@ -45,8 +45,12 @@ $scope.compareResults=function()
   }
   if(rightAnswers==6){
     document.getElementById("messageResult").innerHTML="Yeeaaahhh!!! Marticia is happy!!!";
+    var adioSRC=document.getElementById("audio").src = "sounds/goodSound.mp3";
+    var audio = document.getElementById("audio");
+    audio.play();
   }else{
     document.getElementById("messageResult").innerHTML="Oops .. No, you are wrong! Try one more time to satisy Marticia";
+   var adioSRC=document.getElementById("audio").src = "sounds/badNoise.mp3";
     var audio = document.getElementById("audio");
     audio.play();
     

@@ -4,44 +4,49 @@ body ion-content{
 }
 
  body ion-content h4{
+     margin-top: 3%;
+     margin-left: 5%;
+     margin-right: 5%;
     font-family: "Lucida Calligraphy", "Times New Roman";
+    line-height: 150%;
 }
 body ion-content #kitty {
     display: block;
     margin-left: auto;
     margin-right: auto;
     border:1px solid black;
-    height:100px;
-    width:150px;
-  transform: rotate(90deg);
+    height:300px;
+    width:300px;
+  
 
 }
   #columnLeft{
     float: left;
     width:50%;
-    
+    display:inline;
 }
  #columnRight{
-    
-   float:right;
+    display: inline;
+
    width:50%;
    padding-top: 50px;
-   padding-left: 50px;
+   margin-left: 40%;
 }
 #row:after{
     clear:both;
 }
 #messageResult{
+    clear: both;
     color: #B53396;
     font-family: Lucida Calligraphy;
-    font-size: 26px;
+    font-size: 100%;
     line-height: 30px;
 }
 
 #puzzle{
     
-     height:350px;
-     width:350px;
+     height:100%;
+     width:100%;
 }
 body ion-content button{
     clear:both;
@@ -70,4 +75,17 @@ body ion-content button:hover{
  select{
     background-color: #B53396;
     color:white;
+    margin-bottom: 3%;
+ 
+}
+#right{
+    float: right;
+    margin-right: 15%;
+}
+ol li{
+    font-size: 150%;
+   margin-left: 5%;
+   margin-right: 5%;
+   font-family: 'Times New Roman';
+   line-height: 120%;
 }

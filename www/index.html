@@ -56,8 +56,8 @@
                 I can give you the opportunity to tickle her belly. You just need to define which letter in the cirle(s)
                 belongs to each statement
             </h4><br><br>
-            <img src="img/marticia.jpeg" alt="Marticia picture" id="kitty"><br><br>
-            <ol start="1">
+            <img src="img/imgMarticia.jpeg" alt="Marticia picture" id="kitty"><br><br>
+            <ol >
                 <li>1. Black cats with white paws who are finishing, and who don’t have fleas.</li>
                 <li>2. Grey cats with fleas and white paws, who do not eat fish.</li>
                 <li>3. Red cats with fleas who love fish, and whose paws are not white.</li>
@@ -67,9 +67,9 @@
             </ol><br>
             <div id="row"></div>
             <div id="columnLeft"><img src="img/final.jpeg" alt="Marticia puzzle" id="puzzle"></div>
+            <div id="columnRight">
             <form ng-app="kittyApp" ng-controller="kittyctrl" ng-init="addCorrectAnswers()" ng-submit="calculate()">
-                <div>
-
+<div id="right">
                     <label for="one">1. </label>
                     <select ng-model="one" ng-show="!isObjectEmpty(card)">
                   <option ng-repeat="item in optionvalues">{{item}}</option>                  
@@ -94,13 +94,15 @@
                     <select ng-model="six">
                   <option ng-repeat="item in optionvalues">{{item}}</option>                  
               </select><br>
-                </div><br>
+            </div>
+                <br>
                 <p id="messageResult"></p>
                 <button id="soundcontrols" type="submit">Ask Marticia</button>
 
 
-                <audio id="audio" src="sounds/badNoise.mp3" ></audio>
+                <audio id="audio"  ></audio>
             </form>
+            </div>
         </ion-content>
     </ion-pane>
 </body>
