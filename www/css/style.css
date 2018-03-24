@@ -39,7 +39,9 @@ body ion-content #kitty {
     clear: both;
     color: #B53396;
     font-family: Lucida Calligraphy;
-    font-size: 100%;
+    font-size: 150%;
+    margin-left: 5%;
+    margin-right: 5%;
     line-height: 30px;
 }
 
